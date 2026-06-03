@@ -4,6 +4,10 @@
   "private": true,
   "description": "Plantilla web para crear paginas de empresas con Node y Angular.",
   "packageManager": "pnpm@11.5.1",
+  "engines": {
+    "node": "24.x",
+    "pnpm": "11.x"
+  },
   "scripts": {
     "dev:backend": "pnpm --filter plantilla-empresas-plasencia-backend dev",
     "dev:frontend": "pnpm --filter plantilla-empresas-plasencia-frontend start",
