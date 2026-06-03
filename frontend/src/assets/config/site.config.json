@@ -4,6 +4,7 @@
   "tagline": "Tu empresa en Plasencia con una web clara, rapida y profesional.",
   "description": "Plantilla comun para presentar servicios, ventajas, datos de contacto y llamadas a la accion de cualquier empresa local.",
   "primaryAction": "Solicitar informacion",
+  "apiBaseUrl": "",
   "brand": {
     "primary": "#23443c",
     "accent": "#d59b45",
@@ -22,7 +23,6 @@
   "highlights": [
     "Estructura preparada para SEO local",
     "Bloques reutilizables para distintos sectores",
-    "Formulario conectado con la API Node"
+    "Frontend publicable en GitHub Pages"
   ]
 }
-

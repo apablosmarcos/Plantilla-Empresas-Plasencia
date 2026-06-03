@@ -2,6 +2,7 @@ import { AsyncPipe, NgFor, NgIf } from "@angular/common";
 import { Component } from "@angular/core";
 import { FormBuilder, ReactiveFormsModule, Validators } from "@angular/forms";
 import { HttpClient } from "@angular/common/http";
+import { firstValueFrom } from "rxjs";
 import { SiteConfigService } from "../../core/site-config.service";
 
 @Component({
@@ -29,13 +30,23 @@ export class HomeComponent {
     private readonly http: HttpClient
   ) {}
 
-  submitLead(): void {
+  async submitLead(): Promise<void> {
     if (this.leadForm.invalid) {
       this.leadForm.markAllAsTouched();
       return;
     }
 
-    this.http.post("/api/leads", this.leadForm.getRawValue()).subscribe({
+    const config = await firstValueFrom(this.config$);
+    const apiBaseUrl = config.apiBaseUrl?.trim();
+
+    if (!apiBaseUrl) {
+      this.submitStatus =
+        "Demo activa en GitHub Pages. Configura apiBaseUrl para conectar el formulario con tu backend.";
+      this.leadForm.reset();
+      return;
+    }
+
+    this.http.post(this.buildLeadsUrl(apiBaseUrl), this.leadForm.getRawValue()).subscribe({
       next: () => {
         this.submitStatus = "Solicitud enviada correctamente.";
         this.leadForm.reset();
@@ -45,5 +56,9 @@ export class HomeComponent {
       }
     });
   }
-}
 
+  private buildLeadsUrl(apiBaseUrl: string): string {
+    const normalizedBaseUrl = apiBaseUrl.replace(/\/+$/, "");
+    return `${normalizedBaseUrl}/api/leads`;
+  }
+}

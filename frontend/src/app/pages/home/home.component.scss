@@ -12,7 +12,7 @@
   color: #ffffff;
   background:
     linear-gradient(90deg, rgba(18, 33, 31, 0.84), rgba(18, 33, 31, 0.42)),
-    url("/assets/images/hero-placeholder.svg") center/cover;
+    url("../../../assets/images/hero-placeholder.svg") center/cover;
 }
 
 .nav {
@@ -164,4 +164,3 @@ textarea {
     flex-direction: column;
   }
 }
-

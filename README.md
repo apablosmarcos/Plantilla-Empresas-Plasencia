@@ -41,6 +41,16 @@ pnpm build
 
 La plantilla usa `pnpm` como gestor de paquetes y configura `minimumReleaseAge: 1440` en `pnpm-workspace.yaml`, para esperar 24 horas antes de instalar versiones recien publicadas.
 
+## GitHub Pages
+
+El frontend queda preparado para publicarse en GitHub Pages con GitHub Actions.
+
+- Workflow: `.github/workflows/deploy-pages.yml`
+- Script de build: `pnpm build:pages`
+- URL esperada: `https://apablosmarcos.github.io/Plantilla-Empresas-Plasencia/`
+
+Si `apiBaseUrl` esta vacio en `frontend/src/assets/config/site.config.json`, el formulario funciona en modo demo y no intenta llamar al backend. Para conectarlo con tu API real, rellena `apiBaseUrl` con la URL publica del backend.
+
 ## Personalizacion por empresa
 
 1. Cambiar nombre, sector, descripcion y llamada a la accion en `frontend/src/assets/config/site.config.json`.

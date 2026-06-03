@@ -4,6 +4,7 @@ export interface SiteConfig {
   tagline: string;
   description: string;
   primaryAction: string;
+  apiBaseUrl?: string;
   brand: {
     primary: string;
     accent: string;
@@ -17,4 +18,3 @@ export interface SiteConfig {
   services: string[];
   highlights: string[];
 }
-

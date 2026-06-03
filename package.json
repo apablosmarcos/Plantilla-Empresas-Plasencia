@@ -11,6 +11,7 @@
   "scripts": {
     "dev:backend": "pnpm --filter plantilla-empresas-plasencia-backend dev",
     "dev:frontend": "pnpm --filter plantilla-empresas-plasencia-frontend start",
-    "build": "pnpm --recursive run build"
+    "build": "pnpm --recursive run build",
+    "build:pages": "pnpm --filter plantilla-empresas-plasencia-frontend exec ng build --configuration production --base-href /Plantilla-Empresas-Plasencia/"
   }
 }
