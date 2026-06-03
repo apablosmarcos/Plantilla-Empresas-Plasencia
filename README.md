@@ -11,21 +11,29 @@ Plantilla base para crear paginas web de empresas de Plasencia de forma rapida. 
 ## Puesta en marcha
 
 ```bash
-cd backend
-npm install
-npm run dev
+pnpm install
+pnpm dev:backend
 ```
 
 ```bash
-cd frontend
-npm install
-npm start
+pnpm dev:frontend
 ```
 
 Por defecto:
 
 - API: `http://localhost:3000`
 - Frontend: `http://localhost:4200`
+
+## Comandos principales
+
+```bash
+pnpm install
+pnpm dev:backend
+pnpm dev:frontend
+pnpm build
+```
+
+La plantilla usa `pnpm` como gestor de paquetes y configura `minimumReleaseAge: 1440` en `pnpm-workspace.yaml`, para esperar 24 horas antes de instalar versiones recien publicadas.
 
 ## Personalizacion por empresa
 
@@ -38,4 +46,3 @@ Por defecto:
 ## Objetivo
 
 Esta plantilla sirve como punto de partida para webs de pequenas empresas: restaurantes, comercios, servicios profesionales, talleres, alojamientos, clinicas, academias y negocios locales.
-

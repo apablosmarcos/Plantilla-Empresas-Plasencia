@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "description": "Plantilla web para crear paginas de empresas con Node y Angular.",
+  "packageManager": "pnpm@11.5.1",
   "scripts": {
-    "dev:backend": "npm --prefix backend run dev",
-    "dev:frontend": "npm --prefix frontend start",
-    "build": "npm --prefix backend run build && npm --prefix frontend run build"
+    "dev:backend": "pnpm --filter plantilla-empresas-plasencia-backend dev",
+    "dev:frontend": "pnpm --filter plantilla-empresas-plasencia-frontend start",
+    "build": "pnpm --recursive run build"
   }
 }
-
