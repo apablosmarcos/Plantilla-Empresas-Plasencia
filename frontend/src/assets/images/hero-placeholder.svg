@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-label="Vista abstracta de Plasencia">
+  <rect width="1600" height="1000" fill="#23443c"/>
+  <path d="M0 760 C260 620 430 720 650 570 C860 430 1080 500 1600 290 L1600 1000 L0 1000 Z" fill="#d59b45" opacity="0.82"/>
+  <path d="M0 610 C300 520 520 600 760 430 C980 270 1250 330 1600 180" fill="none" stroke="#f6f3ed" stroke-width="24" opacity="0.55"/>
+  <circle cx="1220" cy="230" r="120" fill="#f6f3ed" opacity="0.18"/>
+</svg>
+

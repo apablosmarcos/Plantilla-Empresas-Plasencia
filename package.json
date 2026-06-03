@@ -1,0 +1,12 @@
+{
+  "name": "plantilla-empresas-plasencia",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Plantilla web para crear paginas de empresas con Node y Angular.",
+  "scripts": {
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend start",
+    "build": "npm --prefix backend run build && npm --prefix frontend run build"
+  }
+}
+

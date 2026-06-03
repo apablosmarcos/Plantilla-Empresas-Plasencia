@@ -1,0 +1,64 @@
+<ng-container *ngIf="config$ | async as config">
+  <main
+    class="site"
+    [style.--brand-primary]="config.brand.primary"
+    [style.--brand-accent]="config.brand.accent"
+    [style.--brand-background]="config.brand.background"
+  >
+    <section class="hero">
+      <nav class="nav" aria-label="Navegacion principal">
+        <strong>{{ config.companyName }}</strong>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="hero__content">
+        <p class="eyebrow">{{ config.sector }}</p>
+        <h1>{{ config.tagline }}</h1>
+        <p class="summary">{{ config.description }}</p>
+        <a class="primary-link" href="#contacto">{{ config.primaryAction }}</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div>
+        <p class="eyebrow">Servicios</p>
+        <h2>Una base comun para presentar cada negocio con claridad.</h2>
+      </div>
+      <div class="grid">
+        <article class="card" *ngFor="let service of config.services">
+          <h3>{{ service }}</h3>
+          <p>Bloque editable para describir este servicio segun la empresa.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="band">
+      <div>
+        <p class="eyebrow">Ventajas</p>
+        <h2>Lista para adaptar a comercios, profesionales y servicios locales.</h2>
+      </div>
+      <ul>
+        <li *ngFor="let highlight of config.highlights">{{ highlight }}</li>
+      </ul>
+    </section>
+
+    <section class="section contact" id="contacto">
+      <div>
+        <p class="eyebrow">Contacto</p>
+        <h2>Hablemos de tu proyecto.</h2>
+        <p>{{ config.contact.address }}</p>
+        <p>{{ config.contact.phone }} · {{ config.contact.email }}</p>
+      </div>
+
+      <form [formGroup]="leadForm" (ngSubmit)="submitLead()">
+        <input type="text" formControlName="name" placeholder="Nombre" aria-label="Nombre">
+        <input type="email" formControlName="email" placeholder="Email" aria-label="Email">
+        <input type="tel" formControlName="phone" placeholder="Telefono" aria-label="Telefono">
+        <textarea formControlName="message" placeholder="Mensaje" aria-label="Mensaje"></textarea>
+        <button type="submit">{{ config.primaryAction }}</button>
+        <p class="status" *ngIf="submitStatus">{{ submitStatus }}</p>
+      </form>
+    </section>
+  </main>
+</ng-container>
+

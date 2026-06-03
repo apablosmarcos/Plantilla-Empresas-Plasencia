@@ -1,0 +1,28 @@
+{
+  "companyName": "Empresa Plasencia",
+  "sector": "Negocio local",
+  "tagline": "Tu empresa en Plasencia con una web clara, rapida y profesional.",
+  "description": "Plantilla comun para presentar servicios, ventajas, datos de contacto y llamadas a la accion de cualquier empresa local.",
+  "primaryAction": "Solicitar informacion",
+  "brand": {
+    "primary": "#23443c",
+    "accent": "#d59b45",
+    "background": "#f6f3ed"
+  },
+  "contact": {
+    "phone": "+34 000 000 000",
+    "email": "contacto@empresa.es",
+    "address": "Plasencia, Caceres"
+  },
+  "services": [
+    "Servicio principal",
+    "Atencion personalizada",
+    "Soluciones a medida"
+  ],
+  "highlights": [
+    "Estructura preparada para SEO local",
+    "Bloques reutilizables para distintos sectores",
+    "Formulario conectado con la API Node"
+  ]
+}
+
