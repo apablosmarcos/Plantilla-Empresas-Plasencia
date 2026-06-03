@@ -5,12 +5,12 @@
   "description": "Plantilla web para crear paginas de empresas con Node y Angular.",
   "packageManager": "pnpm@11.5.1",
   "engines": {
-    "node": "24.x",
+    "node": "22.x",
     "pnpm": "11.x"
   },
   "scripts": {
     "dev:backend": "pnpm --filter plantilla-empresas-plasencia-backend dev",
-    "dev:frontend": "pnpm --filter plantilla-empresas-plasencia-frontend start",
+    "dev:frontend": "pnpm --filter plantilla-empresas-plasencia-frontend exec ng serve",
     "build": "pnpm --recursive run build",
     "build:pages": "pnpm --filter plantilla-empresas-plasencia-frontend exec ng build --configuration production --base-href /Plantilla-Empresas-Plasencia/"
   }

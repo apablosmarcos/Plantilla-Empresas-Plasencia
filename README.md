@@ -12,9 +12,9 @@ Plantilla base para crear paginas web de empresas de Plasencia de forma rapida. 
 
 Entorno recomendado:
 
-- `Node.js 24 LTS`
+- `Node.js 22 LTS`
 - `pnpm 11`
-- En WSL con Homebrew: `brew install pnpm node@24`
+- En WSL con Homebrew: `brew install pnpm node@22`
 
 ```bash
 pnpm install
