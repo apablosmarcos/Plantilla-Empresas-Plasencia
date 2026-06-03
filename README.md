@@ -49,6 +49,17 @@ El frontend queda preparado para publicarse en GitHub Pages con GitHub Actions.
 - Script de build: `pnpm build:pages`
 - URL esperada: `https://apablosmarcos.github.io/Plantilla-Empresas-Plasencia/`
 
+Estado actual:
+
+- El despliegue puede fallar si el repositorio sigue siendo `private` y la cuenta no tiene un plan que permita `GitHub Pages` en repos privados.
+- En ese caso, la causa no es el build del frontend, sino una limitacion del tipo de repositorio o del plan de GitHub.
+
+Opciones para activarlo mas adelante:
+
+1. Cambiar este repositorio a `public`.
+2. Mantenerlo `private` y usar un plan de GitHub compatible con `Pages` en repos privados.
+3. Separar la demo publica en otro repositorio solo para el frontend.
+
 Si `apiBaseUrl` esta vacio en `frontend/src/assets/config/site.config.json`, el formulario funciona en modo demo y no intenta llamar al backend. Para conectarlo con tu API real, rellena `apiBaseUrl` con la URL publica del backend.
 
 ## Personalizacion por empresa
