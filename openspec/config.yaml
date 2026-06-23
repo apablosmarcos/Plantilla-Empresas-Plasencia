@@ -1,0 +1,22 @@
+version: 1
+project:
+  name: Plantilla-Empresas-Plasencia
+  slug: plantilla-empresas-plasencia
+  repo_type: pnpm-workspace-monorepo
+  package_manager: pnpm@11.5.1
+  runtime:
+    node: 22.x
+sdd:
+  artifact_store: openspec
+  strict_tdd: true
+  current_phase: init
+  phase_rules:
+    - complete_only_the_current_phase_per_user_approval
+    - keep_repository_documentation_minimal_and_versionable
+    - avoid_inventing_product_features_in_scaffolding
+testing:
+  workspace_build_command: pnpm build
+  frontend_test_command: pnpm --filter plantilla-empresas-plasencia-frontend test
+  backend_verification_command: pnpm --filter plantilla-empresas-plasencia-backend build
+  notes:
+    - Backend currently has no dedicated test script; build is the available verification command.
